@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   padding: 15px;
-  background-color: black;
+  background: linear-gradient(to left, #21d4fd, #b721ff);
 }
 .wrap-login {
   width: 390px;
@@ -31,7 +31,9 @@
 .login-form-title {
   display: block;
   font-size: 30px;
-  color: azure;
+  background: -webkit-linear-gradient(#21d4fd, #b721ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   line-height: 1.2;
   text-align: center;
 }
@@ -130,6 +132,9 @@
 }
 .input-password:focus + .focus-input::before {
   width: 100%;
+}
+.has-value + .focus-input::after {
+  top: -15px;
 }
 .container-login-form-btn {
   display: flex;
