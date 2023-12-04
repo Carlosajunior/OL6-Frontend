@@ -1,43 +1,47 @@
+import { ReactElement } from "react";
 import { ButtonComponents } from "../../components/ButtonComponents/button-components";
 import { InputComponent } from "../../components/InputComponents/input-components";
 import { LayoutComponents } from "../../components/LayoutComponents/layout-components";
 
 export function SignUpForm() {
+  const dataArray: Array<{
+    inputName: string;
+    inputType: string;
+    inputPlaceholder: string;
+  }> = [
+    { inputName: "name", inputType: "text", inputPlaceholder: "Nome completo" },
+    { inputName: "email", inputType: "text", inputPlaceholder: "E-mail" },
+    {
+      inputName: "email-confirmation",
+      inputType: "text",
+      inputPlaceholder: "email-confirmation",
+    },
+    { inputName: "phone", inputType: "text", inputPlaceholder: "Telefone" },
+    { inputName: "password", inputType: "password", inputPlaceholder: "Senha" },
+    {
+      inputName: "password-confirmation",
+      inputType: "password",
+      inputPlaceholder: "Confirme a senha",
+    },
+  ];
+
+  const inputsArray: Array<ReactElement> = [];
+  dataArray.forEach((data) => {
+    return inputsArray.push(
+      <InputComponent
+        inputName={data.inputName}
+        inputType={data.inputType}
+        inputPlaceholder={data.inputPlaceholder}
+      />
+    );
+  });
+
   return (
     <LayoutComponents>
-      <form className="login-form">
-        <h1 className="login-form-title">Cadastro</h1>
+      <form className="signup-form">
+        <h1 className="signup-form-title">Cadastro</h1>
 
-        <InputComponent
-          inputName="name"
-          inputType="text"
-          inputPlaceholder="Nome completo"
-        />
-        <InputComponent
-          inputName="email"
-          inputType="text"
-          inputPlaceholder="E-mail"
-        />
-        <InputComponent
-          inputName="email-confirmation"
-          inputType="text"
-          inputPlaceholder="Confirme o e-mail"
-        />
-        <InputComponent
-          inputName="phone"
-          inputType="text"
-          inputPlaceholder="Telefone"
-        />
-        <InputComponent
-          inputName="password"
-          inputType="password"
-          inputPlaceholder="Senha"
-        />
-        <InputComponent
-          inputName="password-confirmation"
-          inputType="password"
-          inputPlaceholder="Confirme a senha"
-        />
+        {inputsArray}
         <ButtonComponents buttonPlaceholder="Confirmar" />
       </form>
     </LayoutComponents>
