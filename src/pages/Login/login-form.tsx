@@ -22,7 +22,7 @@ export const LoginForm = () => {
           inputPlaceholder="Password"
         />
 
-        <ButtonComponents buttonName="login-btn" buttonPlaceholder="Login" />
+        <ButtonComponents buttonPlaceholder="Login" />
 
         <div className="text-center-login-form">
           <span className="text-for-non-registered-user">
