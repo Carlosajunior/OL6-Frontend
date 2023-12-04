@@ -28,7 +28,7 @@ export const LoginForm = () => {
           <span className="text-for-non-registered-user">
             Não possui conta?
           </span>
-          <Link className="link-text-for-signup" to="">
+          <Link className="link-text-for-signup" to="/signup">
             Criar conta.
           </Link>
         </div>
