@@ -3,6 +3,8 @@ import { ButtonComponents } from "../../components/button";
 import { InputComponent } from "../../components/input";
 import { LayoutComponents } from "../../components/layout";
 import { FormComponents } from "../../components/form";
+import { Link } from "react-router-dom";
+import "./signup-form-styles.css";
 
 export function SignUpForm() {
   const dataArray: Array<{
@@ -42,6 +44,12 @@ export function SignUpForm() {
       <FormComponents name="signup" formTitle="Cadastro">
         {inputsArray}
         <ButtonComponents buttonPlaceholder="Cadastrar" />
+        <div className="text-center-singup-form">
+          <span className="text-for-registered-user">Já possui cadastro?</span>
+          <Link className="link-text-for-login" to="/login">
+            Fazer login.
+          </Link>
+        </div>
       </FormComponents>
     </LayoutComponents>
   );

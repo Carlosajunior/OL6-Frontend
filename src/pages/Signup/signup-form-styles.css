@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-center-singup-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.text-for-registered-user {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  text-decoration: none;
+  padding-right: 5px;
+}
+.link-text-for-login {
+  font-size: 14px;
+  color: #3584a7;
+  line-height: 1.5;
+  text-decoration: none;
+}
