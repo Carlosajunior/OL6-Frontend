@@ -15,7 +15,7 @@ export function SignUpForm() {
     {
       inputName: "email-confirmation",
       inputType: "text",
-      inputPlaceholder: "email-confirmation",
+      inputPlaceholder: "Confirme o e-mail",
     },
     { inputName: "phone", inputType: "text", inputPlaceholder: "Telefone" },
     { inputName: "password", inputType: "password", inputPlaceholder: "Senha" },
