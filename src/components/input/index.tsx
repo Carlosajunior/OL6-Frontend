@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./input-components-styles.css";
+import "./styles.css";
 
 export const InputComponent = ({ inputName, inputType, inputPlaceholder }) => {
   const [data, setData] = useState("");

@@ -1,4 +1,4 @@
-import "./button-components-styles.css";
+import "./styles.css";
 
 export const ButtonComponents = ({ buttonPlaceholder }) => {
   const classNameButton = `btn-${buttonPlaceholder}`.toLocaleLowerCase();

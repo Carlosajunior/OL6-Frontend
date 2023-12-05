@@ -1,4 +1,4 @@
-import "./form-components-styles.css";
+import "./styles.css";
 
 export const FormComponents = ({ name, formTitle, children }) => {
   const classNameForm = `form-${name}`.toLocaleLowerCase();

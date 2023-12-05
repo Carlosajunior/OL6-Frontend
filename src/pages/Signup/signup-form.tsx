@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
-import { ButtonComponents } from "../../components/ButtonComponents/button-components";
-import { InputComponent } from "../../components/InputComponents/input-components";
-import { LayoutComponents } from "../../components/LayoutComponents/layout-components";
-import { FormComponents } from "../../components/FormCoponents/form-components";
+import { ButtonComponents } from "../../components/button";
+import { InputComponent } from "../../components/input";
+import { LayoutComponents } from "../../components/layout";
+import { FormComponents } from "../../components/form";
 
 export function SignUpForm() {
   const dataArray: Array<{

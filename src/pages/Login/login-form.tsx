@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "./login-form-styles.css";
-import { LayoutComponents } from "../../components/LayoutComponents/layout-components";
-import { InputComponent } from "../../components/InputComponents/input-components";
-import { ButtonComponents } from "../../components/ButtonComponents/button-components";
-import { FormComponents } from "../../components/FormCoponents/form-components";
+import { LayoutComponents } from "../../components/layout";
+import { InputComponent } from "../../components/input";
+import { ButtonComponents } from "../../components/button";
+import { FormComponents } from "../../components/form";
 
 export const LoginForm = () => {
   return (
