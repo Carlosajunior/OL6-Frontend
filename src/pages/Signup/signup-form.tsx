@@ -41,7 +41,7 @@ export function SignUpForm() {
     <LayoutComponents>
       <FormComponents name="signup" formTitle="Cadastro">
         {inputsArray}
-        <ButtonComponents buttonPlaceholder="Confirmar" />
+        <ButtonComponents buttonPlaceholder="Cadastrar" />
       </FormComponents>
     </LayoutComponents>
   );

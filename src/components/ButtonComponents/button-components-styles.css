@@ -36,6 +36,6 @@
   );
   background: linear-gradient(to left, #473b7b 0%, #3584a7 51%, #30d2be 100%);
 }
-.login-form-btn:hover {
+[class*="btn-"]:hover {
   cursor: pointer;
 }
