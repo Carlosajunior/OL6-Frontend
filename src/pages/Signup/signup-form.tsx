@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { ButtonComponents } from "../../components/ButtonComponents/button-components";
 import { InputComponent } from "../../components/InputComponents/input-components";
 import { LayoutComponents } from "../../components/LayoutComponents/layout-components";
+import { FormComponents } from "../../components/FormCoponents/form-components";
 
 export function SignUpForm() {
   const dataArray: Array<{
@@ -38,12 +39,10 @@ export function SignUpForm() {
 
   return (
     <LayoutComponents>
-      <form className="signup-form">
-        <h1 className="signup-form-title">Cadastro</h1>
-
+      <FormComponents name="signup" formTitle="Cadastro">
         {inputsArray}
         <ButtonComponents buttonPlaceholder="Confirmar" />
-      </form>
+      </FormComponents>
     </LayoutComponents>
   );
 }

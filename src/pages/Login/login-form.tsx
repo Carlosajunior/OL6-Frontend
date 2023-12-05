@@ -3,13 +3,12 @@ import "./login-form-styles.css";
 import { LayoutComponents } from "../../components/LayoutComponents/layout-components";
 import { InputComponent } from "../../components/InputComponents/input-components";
 import { ButtonComponents } from "../../components/ButtonComponents/button-components";
+import { FormComponents } from "../../components/FormCoponents/form-components";
 
 export const LoginForm = () => {
   return (
     <LayoutComponents>
-      <form className="login-form">
-        <h1 className="login-form-title">OL6</h1>
-
+      <FormComponents name="login" formTitle="OL6">
         <InputComponent
           inputName="email"
           inputType="text"
@@ -32,7 +31,7 @@ export const LoginForm = () => {
             Criar conta.
           </Link>
         </div>
-      </form>
+      </FormComponents>
     </LayoutComponents>
   );
 };

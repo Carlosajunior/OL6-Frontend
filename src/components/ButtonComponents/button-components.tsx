@@ -1,10 +1,10 @@
 import "./button-components-styles.css";
 
 export const ButtonComponents = ({ buttonPlaceholder }) => {
-  const className = `btn-${buttonPlaceholder}`.toLocaleLowerCase();
+  const classNameButton = `btn-${buttonPlaceholder}`.toLocaleLowerCase();
   return (
     <div className="container-btn">
-      <button className={className}>{buttonPlaceholder}</button>
+      <button className={classNameButton}>{buttonPlaceholder}</button>
     </div>
   );
 };
