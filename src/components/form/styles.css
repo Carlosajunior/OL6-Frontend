@@ -10,7 +10,7 @@
 [class*="form-title-"] {
   display: block;
   font-size: 30px;
-  background: -webkit-linear-gradient(#473b7b 0%, #3584a7 51%, #30d2be 100%);
+  background: -webkit-linear-gradient(135deg, #3498db, #87cefa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.2;
