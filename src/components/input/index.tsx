@@ -12,6 +12,7 @@ export const InputComponent = ({ inputName, inputType, inputPlaceholder }) => {
         type={inputType}
         value={data}
         onChange={(e) => setData(e.target.value)}
+        name={inputName}
       />
       <span className="focus-input" data-placeholder={inputPlaceholder}></span>
     </div>
