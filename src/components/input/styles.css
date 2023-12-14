@@ -38,10 +38,7 @@
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
-  background: -webkit-linear-gradient(135deg, #3498db, #87cefa);
-  background: -o-linear-gradient(135deg, #3498db, #87cefa);
-  background: -moz-linear-gradient(135deg, #3498db, #87cefa);
-  background: linear-gradient(135deg, #3498db, #87cefa);
+  background: linear-gradient(117deg, #1c53ba 0%, #ff8747 99.99%, #d94b00 100%);
 }
 .focus-input::after {
   font-size: 15px;
