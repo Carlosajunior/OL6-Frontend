@@ -6,6 +6,7 @@
 
 [class*="form-"] {
   width: 100%;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
 [class*="form-title-"] {
   display: block;

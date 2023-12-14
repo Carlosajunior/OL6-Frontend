@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./styles.css";
 
-export const InputComponent = ({ inputName, inputType, inputPlaceholder }) => {
+export const InputComponent = ({ inputName, inputType, inputPlaceholder, value="" }) => {
   const [data, setData] = useState("");
+
+  useEffect(()=>{
+    if(value)
+      setData(value)
+  },[value])
+
   return (
     <div className="wrap-input">
       <input
         className={
-          data !== "" ? `has-value input-${inputName}` : `input-${inputName}`
+          data !== "" ? `has-value input-${inputName} ${value ? `color-font`: ``}` : `input-${inputName}`
         }
         type={inputType}
         value={data}

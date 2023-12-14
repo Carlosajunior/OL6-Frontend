@@ -4,7 +4,7 @@ const instance = axios.create({
  timeout: 15000,
 });
 
-type User = {
+/*type User = {
     data: {
         email: string,
         password: string
@@ -16,7 +16,7 @@ type User = {
   
 type GetUsersResponse = {
     data: User[];
-};
+};*/
 
 type GetUserResponse = {
     data: {
@@ -55,6 +55,21 @@ type DeleteUserResponse = {
     timestamp: number
 };
 
+type User = {
+    name: string,
+    id: string,
+    phone: string,
+    email: string
+}
+
+type Teste ={
+    data: [{id: string, email: string, phone: string, name: string}]
+    message: string
+    success: string
+    time: string
+    timestamp: number
+}
+
 export async function getUser(id: string) {
     try {
     
@@ -78,10 +93,10 @@ export async function getUser(id: string) {
     }
 }
 
-export async function getUsers() {
+export async function getUsers(): Promise<User[]>{
     try {
     
-     const { data, status } = await instance.get<GetUserResponse>(
+     const { data, status } = await instance.get<Teste>(
         '/users',
         {
           headers: {
@@ -89,17 +104,19 @@ export async function getUsers() {
           },
         },
       );
+      const result: User[] = data.data
+      console.log(data)
         if(status === 200)
-            return data;
+            return result;
         else
-            return null
+            return []
     } catch (error) {
       if (axios.isAxiosError(error)) {
             console.log('error message: ', error.message);
-            return error.message;
+            return []
       } else {
             console.log('unexpected error: ', error);
-            return 'An unexpected error occurred';
+            return []
       }
     }
 }
@@ -131,11 +148,11 @@ export async function login(email: string, password: string) {
     }
 }
 
-export async function createUser(email: string, password: string) {
+export async function createUser(email: string, password: string, phone: string, name: string) {
     try {
         const { data } = await instance.post<GetUserResponse>(
         '/users',
-        {email: email, password: password},
+        {email: email, password: password, phone: phone, name: name},
         {
             headers: {
             Accept: 'application/json',
@@ -154,10 +171,17 @@ export async function createUser(email: string, password: string) {
     }
 }
 
-export async function updateUser(id: string) {
+export async function updateUser(email: string, password: string, phone: string, name: string, id: string) {
     try {
+        let data1 ={
+            name: name,
+            email: email,
+            phone: phone,
+
+        }
         const { data } = await instance.put<UpdateUserResponse>(
         '/users/'+id,
+        {email: email, phone: phone, name: name},
         {
             headers: {
             Accept: 'application/json',

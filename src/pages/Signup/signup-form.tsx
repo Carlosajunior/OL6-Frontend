@@ -5,8 +5,11 @@ import { LayoutComponents } from "../../components/layout";
 import { FormComponents } from "../../components/form";
 import { Link } from "react-router-dom";
 import "./signup-form-styles.css";
+import { createUser } from "../../controller/services";
+import { useNavigate } from "react-router-dom";
 
 export function SignUpForm() {
+  const navigate = useNavigate()
   const dataArray: Array<{
     inputName: string;
     inputType: string;
@@ -39,9 +42,33 @@ export function SignUpForm() {
     );
   });
 
+  const CreateUser = (e: React.FormEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    const target = e.target as typeof e.target & {
+      email: { value: string };
+      password: { value: string };
+      phone: { value: string };
+      name: {value: string}
+    };
+    const email = target.email.value;
+    const password = target.password.value;
+    const phone = target.phone.value;
+    const name = target.name.value;
+
+    createUser(email, password, phone, name)
+    .then((data) => {
+     if(data)
+        navigate("/home")
+    })
+    .then((err) => {
+      console.log(err)
+    });
+   }
+
+
   return (
     <LayoutComponents>
-      <FormComponents name="signup" formTitle="Cadastro">
+      <FormComponents name="signup" formTitle="Cadastro" submit={CreateUser}>
         {inputsArray}
         <ButtonComponents buttonPlaceholder="Cadastrar" />
         <div className="text-center-singup-form">

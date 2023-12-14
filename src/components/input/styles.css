@@ -70,3 +70,6 @@
 .has-value + .focus-input::after {
   top: -15px;
 }
+.color-font {
+  color: black !important;
+}
