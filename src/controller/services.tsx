@@ -59,11 +59,12 @@ type User = {
     name: string,
     id: string,
     phone: string,
-    email: string
+    email: string,
+    tipo: string
 }
 
 type Teste ={
-    data: [{id: string, email: string, phone: string, name: string}]
+    data: [{id: string, email: string, phone: string, name: string, tipo: string}]
     message: string
     success: string
     time: string

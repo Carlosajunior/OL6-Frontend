@@ -1,5 +1,22 @@
+html,body,#root{
+    height: 100%;
+}
 .cursor {
     :hover{
         cursor: pointer;
     }
   }
+
+.con{
+    /*background-image: linear-gradient(135deg, #002f87, #f46214);*/
+    font-family: "Calibri";
+    height: 100%;
+}
+.teste{
+    font-weight: bold !important;
+    color: #1c53ba !important;
+}
+
+.css-34nofg-MuiTableRow-root:last-child td, .css-34nofg-MuiTableRow-root:last-child th{
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
